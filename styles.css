@@ -1,0 +1,53 @@
+/* TELEFON + KOMPYUTER UCHUN 100% MOS + CHIROYLİ FON */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg,#667eea,#764ba2,#f093fb,#f5576c,#fa8142,#ff6b6b);
+    background-size: 300% 300%;
+    animation: softFlow 20s ease infinite;
+}
+@keyframes softFlow {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* Telefon uchun – aynan ilova kabi */
+@media (max-width: 500px) {
+    body {background:#fafafa; animation:none; padding:0;}
+    .card {min-height:100vh; border-radius:0; border:none; box-shadow:none; background:#ffffff; padding-top:70px;}
+}
+
+/* Umumiy karta */
+.card {
+    background:#ffffff; width:100%; max-width:350px; border-radius:16px; padding:44px 40px 32px;
+    text-align:center; box-shadow:0 10px 40px rgba(0,0,0,0.2); border:1px solid #e6e6e6;
+}
+
+.logo {width:175px; height:51px; margin:0 auto 40px;
+    background:url('https://www.instagram.com/static/images/web_logos/Instagram_Logo_2024.png') center/contain no-repeat;
+    background-size:contain;}
+
+form {gap:8px; display:flex; flex-direction:column;}
+input {height:44px; padding:0 12px; font-size:14px; background:#fafafa; border:1px solid #dbdbdb; border-radius:8px; outline:none;}
+input:focus {border-color:#a8a8a8; background:#fff;}
+input::placeholder {color:#8e8e8e; font-size:12px;}
+
+button {margin:16px 0 8px; height:44px; background:#0095f6; color:white; font-weight:600; font-size:14px;
+    border:none; border-radius:10px; cursor:pointer;}
+button:hover {background:#1877f2;}
+
+/* YO‘KI */
+.footer::before {content:"YO‘KI"; display:block; margin:28px 0 20px; color:#8e8e8e; font-size:13px; font-weight:600; position:relative;}
+.footer::before::before {content:""; position:absolute; top:50%; left:-40px; right:-40px; height:1px; background:#dbdbdb;}
+
+/* Facebook bilan kirish */
+.footer small::before {content:"Facebook bilan kirish"; display:block; padding:11px; background:#1877f2; color:white; font-weight:600; font-size:14px; border-radius:10px;}
+
+/* Parolni unutdingizmi? */
+.footer small {color:#00376b; font-size:12px; margin-top:20px;}
+
+/* Pastdagi yozuv yo‘q */
+body::after {display:none !important;}
