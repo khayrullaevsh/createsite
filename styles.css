@@ -13,17 +13,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px; /* Mobil uchun chekka padding */
 }
 
 /* Card */
 .card {
     width: 350px;
+    max-width: 100%;
     background-color: #ffffff;
     border: 1px solid #dbdbdb;
-    padding: 40px 40px 20px;
+    border-radius: 12px;
+    padding: 40px 30px 30px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
 }
 
 /* Instagram yozuvi */
@@ -38,29 +40,28 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
+
 input {
-    background-color: #fafafa;        /* Yumshoq fon */
-    border: 1px solid #dbdbdb;        /* Kichik border */
-    border-radius: 8px;                /* Yuqoriga yumaloqlik */
-    padding: 12px 10px;                /* Ichki joyni biroz kattaroq */
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    padding: 12px 14px;
     font-size: 14px;
     color: #262626;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
 }
 
-/* Placeholder rangi */
 input::placeholder {
     color: #8e8e8e;
 }
 
-/* Fokusga kelganda effekt */
 input:focus {
     outline: none;
     border-color: #a8a8a8;
     box-shadow: 0 0 8px rgba(0,0,0,0.08);
-    transform: scale(1.02);  /* Biroz kattalashadi */
+    transform: scale(1.02);
 }
 
 /* Button */
@@ -68,8 +69,8 @@ button {
     margin-top: 12px;
     background-color: #0095f6;
     border: none;
-    border-radius: 8px;
-    padding: 8px 0;
+    border-radius: 10px;
+    padding: 10px 0;
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
@@ -94,12 +95,27 @@ button:hover {
     color: #8e8e8e;
 }
 
-/* Mobile */
-@media (max-width: 400px) {
+/* Mobile responsive */
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
     .card {
         width: 100%;
-        border: none;
-        background-color: transparent;
-        box-shadow: none;
+        padding: 30px 20px 25px;
+        margin-top: 30px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    input, button {
+        border-radius: 8px;
+        font-size: 13px;
+        padding: 10px 12px;
     }
 }
