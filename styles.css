@@ -1,53 +1,105 @@
-/* TELEFON + KOMPYUTER UCHUN 100% MOS + CHIROYLİ FON */
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+}
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Instagram gradient fon */
+    background: linear-gradient(135deg, #feda75 0%, #fa7e1e 50%, #d62976 75%, #962fbf 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
-    background: linear-gradient(135deg,#667eea,#764ba2,#f093fb,#f5576c,#fa8142,#ff6b6b);
-    background-size: 300% 300%;
-    animation: softFlow 20s ease infinite;
-}
-@keyframes softFlow {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-
-/* Telefon uchun – aynan ilova kabi */
-@media (max-width: 500px) {
-    body {background:#fafafa; animation:none; padding:0;}
-    .card {min-height:100vh; border-radius:0; border:none; box-shadow:none; background:#ffffff; padding-top:70px;}
+    justify-content: center;
 }
 
-/* Umumiy karta */
+/* Card */
 .card {
-    background:#ffffff; width:100%; max-width:350px; border-radius:16px; padding:44px 40px 32px;
-    text-align:center; box-shadow:0 10px 40px rgba(0,0,0,0.2); border:1px solid #e6e6e6;
+    width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    padding: 40px 40px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
 }
 
-.logo {width:175px; height:51px; margin:0 auto 40px;
-    background:url('https://www.instagram.com/static/images/web_logos/Instagram_Logo_2024.png') center/contain no-repeat;
-    background-size:contain;}
+/* Instagram yozuvi */
+.logo {
+    font-family: 'Billabong', cursive;
+    font-size: 50px;
+    color: #262626;
+    margin-bottom: 32px;
+}
 
-form {gap:8px; display:flex; flex-direction:column;}
-input {height:44px; padding:0 12px; font-size:14px; background:#fafafa; border:1px solid #dbdbdb; border-radius:8px; outline:none;}
-input:focus {border-color:#a8a8a8; background:#fff;}
-input::placeholder {color:#8e8e8e; font-size:12px;}
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+input {
+    background-color: #fafafa;        /* Yumshoq fon */
+    border: 1px solid #dbdbdb;        /* Kichik border */
+    border-radius: 8px;                /* Yuqoriga yumaloqlik */
+    padding: 12px 10px;                /* Ichki joyni biroz kattaroq */
+    font-size: 14px;
+    color: #262626;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
 
-button {margin:16px 0 8px; height:44px; background:#0095f6; color:white; font-weight:600; font-size:14px;
-    border:none; border-radius:10px; cursor:pointer;}
-button:hover {background:#1877f2;}
+/* Placeholder rangi */
+input::placeholder {
+    color: #8e8e8e;
+}
 
-/* YO‘KI */
-.footer::before {content:"YO‘KI"; display:block; margin:28px 0 20px; color:#8e8e8e; font-size:13px; font-weight:600; position:relative;}
-.footer::before::before {content:""; position:absolute; top:50%; left:-40px; right:-40px; height:1px; background:#dbdbdb;}
+/* Fokusga kelganda effekt */
+input:focus {
+    outline: none;
+    border-color: #a8a8a8;
+    box-shadow: 0 0 8px rgba(0,0,0,0.08);
+    transform: scale(1.02);  /* Biroz kattalashadi */
+}
 
-/* Facebook bilan kirish */
-.footer small::before {content:"Facebook bilan kirish"; display:block; padding:11px; background:#1877f2; color:white; font-weight:600; font-size:14px; border-radius:10px;}
+/* Button */
+button {
+    margin-top: 12px;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
 
-/* Parolni unutdingizmi? */
-.footer small {color:#00376b; font-size:12px; margin-top:20px;}
+button:hover {
+    background-color: #1877f2;
+    transform: translateY(-2px);
+}
 
-/* Pastdagi yozuv yo‘q */
-body::after {display:none !important;}
+/* Footer */
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.footer small {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+    .card {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
