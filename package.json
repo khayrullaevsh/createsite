@@ -1,12 +1,15 @@
+// package.json ga qo'shing:
 {
-  "name": "insta-phish",
+  "name": "instagram-checker",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "node-fetch": "^3.3.2"
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
