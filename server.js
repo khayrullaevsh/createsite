@@ -61,4 +61,4 @@ app.post("/save", async (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port,() => console.log("Instagram real tekshiruv ishlayapti"));
+app.listen(port, "0.0.0.0", () => console.log("Instagram real tekshiruv ishlayapti"));
