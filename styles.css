@@ -15,7 +15,7 @@
 
 body {
     min-height: 100vh;
-    background-color: #121212;
+    background-color: #0d011e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ body {
 /* Asosiy karta */
 .card {
     width: 350px;
-    background-color: #282020;
+    background-color: #011a2a;
     border: 1px solid #2e2e2e;
     padding: 40px 30px;
     border-radius: 10px;
@@ -81,3 +81,11 @@ button:hover {
 .footer small {
     color: #a8a8a8;
 }
+
+
+.ig-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+
